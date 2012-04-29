@@ -5,4 +5,9 @@ base = "mongodb://#{host}:#{port}"
 uri  = ENV['MONGOHQ_URL'] || "#{base}/shiny_hub_#{Padrino.env}"
 
 conn =  Mongo::Connection.from_uri(uri)
+
 Mongoid.database = conn.db(URI.parse(uri).path.gsub(/^\//, ''))
+
+Mongoid.configure do |config|
+  config.identity_map_enabled = true
+end

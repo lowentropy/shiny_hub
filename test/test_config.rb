@@ -3,6 +3,8 @@ require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 
 class Test::Unit::TestCase
   include Rack::Test::Methods
+  
+  before(:each) { Mongoid::IdentityMap.clear }
 
   def app
     ##
