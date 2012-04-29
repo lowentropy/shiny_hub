@@ -4,9 +4,6 @@ source :rubygems
 # gem 'thin' # or mongrel
 # gem 'trinidad', :platform => 'jruby'
 
-# Heroku
-gem 'heroku'
-
 # Project requirements
 gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
@@ -15,12 +12,11 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'sass'
 gem 'haml'
-gem 'SystemTimer', :require => "system_timer"
 gem 'mongoid'
 gem 'bson_ext', :require => "mongo"
 
 # Test requirements
-gem 'rspec', :group => "test"
+gem 'shoulda', :group => "test"
 gem 'rack-test', :require => "rack/test", :group => "test"
 
 # Padrino Stable Gem

@@ -1,8 +1,8 @@
 --- 
-:test: rspec
-:admin_renderer: haml
+:test: shoulda
+:stylesheet: sass
+:script: jquery
 :renderer: haml
 :orm: mongoid
-:script: jquery
 :mock: none
-:stylesheet: sass
+:admin_renderer: haml

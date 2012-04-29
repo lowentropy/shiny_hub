@@ -27,7 +27,7 @@
 #
 Padrino.configure_apps do
   # enable :sessions
-  set :session_secret, 'ae185c650ee9ba796ceeff85aa9dd8780de9308a44324ea6d6ec2551c7a69435'
+  set :session_secret, '422c9068c888fd3675cbdd079f3cfe0588384f5446a70ac3cb868d9b93355d0b'
 end
 
 # Mounts the core application for this project
