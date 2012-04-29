@@ -1,13 +1,14 @@
-class Scene
+class Surface
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Versioning
-
+  
   field :name, type: String
+  field :emissivity, type: Color
+  field :absorptivity, type: Color
   
-  embeds_many :scene_objects
-  embeds_many :scene_views
+  embeds_one :reflector
   
-  validates_presence_of :name
+  validates_presence_of :name, :emissivity, :absorptivity, :reflector
   validates_uniqueness_of :name, case_sensitive: false
 end

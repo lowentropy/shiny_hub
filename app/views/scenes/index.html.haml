@@ -1,0 +1,5 @@
+%h1 #{@scenes.size} Scenes
+
+%ul
+  - @scenes.each do |scene|
+    %li= link_to scene.name, url_for(:scenes, :show, :name => scene.name)

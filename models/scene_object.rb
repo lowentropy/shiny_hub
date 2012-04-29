@@ -1,13 +1,14 @@
-class Scene
+class SceneObject
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Mongoid::Versioning
+  
+  embedded_in :scene
 
   field :name, type: String
   
-  embeds_many :scene_objects
-  embeds_many :scene_views
+  belongs_to :material
+  belongs_to :surface
   
-  validates_presence_of :name
+  validates_presence_of :name, :material, :surface
   validates_uniqueness_of :name, case_sensitive: false
 end
