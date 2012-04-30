@@ -7,6 +7,10 @@ class ShinyHub < Padrino::Application
   enable :sessions
   
   layout :main
+  
+  get '/wat' do
+    render 'home/wat'
+  end
 
   ##
   # Caching support
