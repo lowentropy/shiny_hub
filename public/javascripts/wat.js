@@ -1,6 +1,6 @@
 function wat() {
   var socket;
-  var host = "ws://127.0.0.1:3000/ws";
+  var host = 'ws://' + window.location.host + '/ws';
   try {
     socket = new WebSocket(host);
     socket.onopen = function(msg) {
